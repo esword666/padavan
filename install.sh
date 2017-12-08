@@ -22,8 +22,6 @@ copyRouteConfig(){
 	echo "--------------开始复制路由器适配文件------------------"
 	if [ -d "${ROOTDIR}/trunk/configs/" ] ; then
 		sudo cp -fRv "${ROOTDIR}/trunk/configs/" "${DESTDIR}/trunk/"
-	fi
-	if [ -d "${DESTDIR}/trunk/configs/templates/psg1218_base.config" ] ; then
 		sudo cp -fRv "${DESTDIR}/trunk/configs/templates/psg1218_base.config" "${DESTDIR}/trunk/.config"
 	fi
 	echo "--------------复制路由器适配文件结束------------------"
