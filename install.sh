@@ -23,32 +23,12 @@ copyRouteConfig(){
 	if [ -d "${ROOTDIR}/trunk/configs/" ] ; then
 		cp -fRv "${ROOTDIR}/trunk/configs/" "${DESTDIR}/trunk/"
 	fi
+	if [ -d "${DESTDIR}/trunk/configs/templates/psg1218_base.config" ] ; then
+		cp -fRv "${DESTDIR}/trunk/configs/templates/psg1218_base.config" "${DESTDIR}/trunk/.config"
+	fi
 	echo "--------------复制路由器适配文件结束------------------"
 }
 
-copyEEPROM(){
-	echo "--------------开始复制原厂EEPROM文件------------------"
-	if [ -d "${ROOTDIR}/trunk/MT7612E_EEPROM.bin" ] ; then
-		cp -fv "${ROOTDIR}/trunk/MT7612E_EEPROM.bin" "${DESTDIR}/trunk/vendors/Ralink/MT7620/MT7612E_EEPROM.bin"
-	fi
-	echo "--------------复制原厂EEPROM文件结束------------------"
-}
-
-copyNormalMode(){
-	echo "--------------开始复制正常模式原厂信号增益文件------------------"
-	if [ -d "${ROOTDIR}/trunk/MT7620_AP_2T2R-4L_V13.bin" ] ; then
-		cp -fv "${ROOTDIR}/trunk/MT7620_AP_2T2R-4L_V13.bin" "${DESTDIR}/trunk/vendors/Ralink/MT7620/MT7620_AP_2T2R-4L_external_LNA_external_PA_V15.bin"
-	fi
-	echo "--------------复制正常模式原厂信号增益文件结束------------------"
-}
-
-copyNoclip(){
-	echo "--------------开始复制穿墙模式原厂信号增益文件------------------"
-	if [ -d "${ROOTDIR}/trunk/MT7620_AP_2T2R-4L_V15.bin" ] ; then
-		cp -fv "${ROOTDIR}/trunk/MT7620_AP_2T2R-4L_V15.bin" "${DESTDIR}/trunk/vendors/Ralink/MT7620/MT7620_AP_2T2R-4L_external_LNA_external_PA_V15.bin"
-	fi
-	echo "--------------复制复制穿墙模式原厂信号增益文件结束------------------"
-}
 while :
 do
 	echo -e "\n"
@@ -56,9 +36,7 @@ do
     echo "-----------------------------"
     echo " [1] 安装汉化文件"
     echo " [2] 安装路由器适配文件"
-    echo " [3] 安装正常模式原厂信号增益文件"
-    echo " [4] 安装穿墙模式原厂信号增益文件"
-    echo " [5] 退出"
+    echo " [4] 退出"
     echo "-----------------------------"
     read option
     case ${option} in
@@ -66,11 +44,7 @@ do
         ;;
         2) copyRouteConfig
         ;;
-        3) copyEEPROM;copyNormalMode
-        ;;
-        4) copyEEPROM;copyNoclip
-        ;;
-        5|q|Q|quit|exit)
+        3|q|Q|quit|exit)
             break
         ;;
     esac
