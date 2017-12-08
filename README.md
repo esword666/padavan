@@ -17,8 +17,6 @@ oschina镜像（不定期同步）: https://git.oschina.net/gorden5566/rt-n56u
 
 3. 添加斐讯K2(PSG1218)路由器适配文件
 
-4. 添加原厂讯号增益文件
-
 ## 三、汉化文件使用方法
 
 1. 编辑install.sh，修改DESTDIR为你的项目目录
@@ -38,8 +36,6 @@ oschina镜像（不定期同步）: https://git.oschina.net/gorden5566/rt-n56u
 ## 四、路由器适配文件说明
 
 1. 路由器适配文件位于`padavan/trunk/configs/boards`目录下。
-
-	注意：需手动将路由器适配文件复制到你的项目对应目录下
 
 2. 编辑你的项目trunk目录下的.config，修改路由器型号相关配置
 
