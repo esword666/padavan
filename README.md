@@ -17,7 +17,46 @@ oschina镜像（不定期同步）: https://git.oschina.net/gorden5566/rt-n56u
 
 3. 添加斐讯K2(PSG1218)路由器适配文件
 
-## 三、汉化文件使用方法
+## 三、配置编译环境
+
+1. 安装git
+
+	sudo apt-get update 
+	sudo apt-get install git
+	
+   转到/opt目录，并且用命令克隆 Padavan 仓库
+   
+	cd /opt
+	sudo git clone https://bitbucket.org/padavan/rt-n56u.git
+
+2. 安装编译固件所需要的工具
+
+	sudo apt-get install git autopoint autoconf automake bison build-essential flex gawk gettext gperf libtool pkg-config zlib1g-dev libgmp3-dev libmpc-dev libmpfr-dev texinfo python-docutils mc
+
+3. 克隆源码
+
+	cd /opt
+	sudo git clone https://bitbucket.org/padavan/rt-n56u.git
+
+4. 生成工具
+	cd /opt/rt-n56u/toolchain-mipsel
+	sudo ./clean_sources
+	sudo ./build_toolchain
+
+   注：以后源码更新了，需要执行以下命令。
+   
+	sudo git pull
+	cd /opt/rt-n56u/toolchain-mipsel
+	sudo ./clean_sources  
+	sudo ./clean_toolchain  
+	sudo ./build_toolchain
+
+   若无法更新，恢复初始再更新
+   
+	sudo git stash
+	sudo git pull
+
+## 四、汉化文件使用方法
 
 1. 编辑install.sh，修改DESTDIR为你的项目目录
 
@@ -27,18 +66,10 @@ oschina镜像（不定期同步）: https://git.oschina.net/gorden5566/rt-n56u
 
 	`sh install.sh`
 
-3. 编辑你的项目trunk目录下的.config，修改语言配置项
-
-	`CONFIG_FIRMWARE_INCLUDE_LANG_CN=y`
-
 4. 编译项目
 
-## 四、路由器适配文件说明
-
-1. 路由器适配文件位于`padavan/trunk/configs/boards`目录下。
-
-2. 编辑你的项目trunk目录下的.config，修改路由器型号相关配置
-
-	`CONFIG_PRODUCT=MT7620`
-
-	`CONFIG_FIRMWARE_PRODUCT_ID="PSG1218"`
+	cd /opt/rt-n56u/trunk
+	sudo ./clear_tree
+	sudo ./build_firmware
+	
+编译完成的固件在/opt/rt-n56u/trunk/images
