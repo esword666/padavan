@@ -13,7 +13,7 @@ fi
 copyDict(){
 	echo "--------------开始复制语言文件------------------"
 	if [ -d "${ROOTDIR}/trunk/user/" ] ; then
-		cp -fRv "${ROOTDIR}/trunk/user/" "${DESTDIR}/trunk/"
+		sudo cp -fRv "${ROOTDIR}/trunk/user/" "${DESTDIR}/trunk/"
 	fi
 	echo "--------------复制语言文件结束------------------"
 }
@@ -21,10 +21,10 @@ copyDict(){
 copyRouteConfig(){
 	echo "--------------开始复制路由器适配文件------------------"
 	if [ -d "${ROOTDIR}/trunk/configs/" ] ; then
-		cp -fRv "${ROOTDIR}/trunk/configs/" "${DESTDIR}/trunk/"
+		sudo cp -fRv "${ROOTDIR}/trunk/configs/" "${DESTDIR}/trunk/"
 	fi
 	if [ -d "${DESTDIR}/trunk/configs/templates/psg1218_base.config" ] ; then
-		cp -fRv "${DESTDIR}/trunk/configs/templates/psg1218_base.config" "${DESTDIR}/trunk/.config"
+		sudo cp -fRv "${DESTDIR}/trunk/configs/templates/psg1218_base.config" "${DESTDIR}/trunk/.config"
 	fi
 	echo "--------------复制路由器适配文件结束------------------"
 }
@@ -36,7 +36,7 @@ do
     echo "-----------------------------"
     echo " [1] 安装汉化文件"
     echo " [2] 安装路由器适配文件"
-    echo " [4] 退出"
+    echo " [3] 退出"
     echo "-----------------------------"
     read option
     case ${option} in
