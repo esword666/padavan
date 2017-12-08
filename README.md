@@ -1,3 +1,4 @@
+
 # padavan
 
 padavan汉化文件
@@ -15,6 +16,8 @@ oschina镜像（不定期同步）: https://git.oschina.net/gorden5566/rt-n56u
 2. 添加汉化文件
 
 3. 添加斐讯K2(PSG1218)路由器适配文件
+
+4. 添加原厂讯号增益文件
 
 ## 三、汉化文件使用方法
 
