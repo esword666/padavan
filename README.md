@@ -21,40 +21,40 @@ oschina镜像（不定期同步）: https://git.oschina.net/gorden5566/rt-n56u
 
 1. 安装git
 
-	sudo apt-get update 
-	sudo apt-get install git
+	`sudo apt-get update`
+	`sudo apt-get install git`
 	
    转到/opt目录，并且用命令克隆 Padavan 仓库
    
-	cd /opt
-	sudo git clone https://bitbucket.org/padavan/rt-n56u.git
+	`cd /opt`
+	`sudo git clone https://bitbucket.org/padavan/rt-n56u.git`
 
 2. 安装编译固件所需要的工具
 
-	sudo apt-get install git autopoint autoconf automake bison build-essential flex gawk gettext gperf libtool pkg-config zlib1g-dev libgmp3-dev libmpc-dev libmpfr-dev texinfo python-docutils mc
+	`sudo apt-get install git autopoint autoconf automake bison build-essential flex gawk gettext gperf libtool pkg-config zlib1g-dev libgmp3-dev libmpc-dev libmpfr-dev texinfo python-docutils mc`
 
 3. 克隆源码
 
-	cd /opt
-	sudo git clone https://bitbucket.org/padavan/rt-n56u.git
+	`cd /opt`
+	`sudo git clone https://bitbucket.org/padavan/rt-n56u.git`
 
 4. 生成工具
-	cd /opt/rt-n56u/toolchain-mipsel
-	sudo ./clean_sources
-	sudo ./build_toolchain
+	`cd /opt/rt-n56u/toolchain-mipsel`
+	`sudo ./clean_sources`
+	`sudo ./build_toolchain`
 
    注：以后源码更新了，需要执行以下命令。
    
-	sudo git pull
-	cd /opt/rt-n56u/toolchain-mipsel
-	sudo ./clean_sources  
-	sudo ./clean_toolchain  
-	sudo ./build_toolchain
+	`sudo git pull`
+	`cd /opt/rt-n56u/toolchain-mipsel`
+	`sudo ./clean_sources`
+	`sudo ./clean_toolchain`
+	`sudo ./build_toolchain`
 
    若无法更新，恢复初始再更新
    
-	sudo git stash
-	sudo git pull
+	`sudo git stash`
+	`sudo git pull`
 
 ## 四、汉化文件使用方法
 
@@ -68,8 +68,8 @@ oschina镜像（不定期同步）: https://git.oschina.net/gorden5566/rt-n56u
 
 4. 编译项目
 
-	cd /opt/rt-n56u/trunk
-	sudo ./clear_tree
-	sudo ./build_firmware
+	`cd /opt/rt-n56u/trunk`
+	`sudo ./clear_tree`
+	`sudo ./build_firmware`
 	
-编译完成的固件在/opt/rt-n56u/trunk/images
+编译完成的固件在`/opt/rt-n56u/trunk/images`
