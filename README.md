@@ -21,7 +21,7 @@ oschina镜像（不定期同步）: https://git.oschina.net/gorden5566/rt-n56u
 
 1. 编辑install.sh，修改DESTDIR为你的项目目录
 
-	默认 `DESTDIR=~/opt/rt-n56u`
+	默认 `DESTDIR=/opt/rt-n56u`
 
 2. 执行install.sh将文件复制到你的项目中
 
