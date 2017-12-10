@@ -29,7 +29,7 @@ copyRouteConfig(){
 
 while :
 do
-	echo -e "\n"
+	echo "\n"
     echo "请选择你要执行的操作[1|2|3]:"
     echo "-----------------------------"
     echo " [1] 安装汉化文件"
