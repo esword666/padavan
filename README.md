@@ -1,4 +1,4 @@
-
+ 
 
 # padavan
 
@@ -34,7 +34,7 @@ oschina镜像（不定期同步）: https://git.oschina.net/gorden5566/rt-n56u
 
 2. 安装编译固件所需要的工具
 
-	`sudo apt-get install git autopoint autoconf automake bison build-essential flex gawk gettext gperf libtool pkg-config zlib1g-dev libgmp3-dev libmpc-dev libmpfr-dev texinfo python-docutils mc`
+	`sudo apt-get install git autopoint autoconf automake bison build-essential flex gawk gettext gperf libtool pkg-config zlib1g-dev libgmp3-dev libmpc-dev libmpfr-dev libltdl-dev texinfo python-docutils mc`
 
 3. 克隆源码
 
