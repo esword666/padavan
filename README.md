@@ -8,7 +8,7 @@ padavan汉化文件
 
 项目地址: https://bitbucket.org/padavan/rt-n56u
 
-oschina镜像（不定期同步）: https://git.oschina.net/gorden5566/rt-n56u
+oschina镜像: https://gitee.com/Kwanlam/rt-n56u.git
 
 ## 二、文件说明
 
